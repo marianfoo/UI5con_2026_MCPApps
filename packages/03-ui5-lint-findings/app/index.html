@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI5 Lint Findings</title>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <section class="page">
+      <ui5-card>
+        <ui5-card-header id="card-header" slot="header" title-text="UI5 Lint Findings" subtitle-text="Waiting for tool result"></ui5-card-header>
+
+        <div class="content">
+          <ui5-message-strip id="summary-strip" hide-close-button>
+            The lint report will appear after the MCP tool result is received.
+          </ui5-message-strip>
+
+          <section class="toolbar" aria-label="Lint report actions">
+            <ui5-button id="rerun-button" design="Emphasized">Rerun linter</ui5-button>
+            <ui5-button id="clear-ignores-button" design="Transparent">Clear UI filters</ui5-button>
+            <label class="check">
+              <input id="show-ignored" type="checkbox" />
+              Show ignored
+            </label>
+          </section>
+
+          <section class="block">
+            <h2>Active findings by rule</h2>
+            <div id="rule-chips" class="chips"></div>
+          </section>
+
+          <section class="block">
+            <h2 id="findings-title">Findings by file</h2>
+            <div id="file-list" class="file-list"></div>
+          </section>
+        </div>
+      </ui5-card>
+    </section>
+  </body>
+</html>

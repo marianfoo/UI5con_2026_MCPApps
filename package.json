@@ -1,0 +1,46 @@
+{
+  "name": "ui5con-mcp-apps-samples",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:samples && npm run build:server",
+    "build:samples": "npm run build:sample:00 && npm run build:sample:01 && npm run build:sample:02 && npm run build:sample:03 && npm run build:sample:04",
+    "build:sample:00": "SAMPLE=00-html-time vite build",
+    "build:sample:01": "SAMPLE=01-ui5-webc-project-overview vite build",
+    "build:sample:02": "SAMPLE=02-ui5-card-project-overview vite build",
+    "build:sample:03": "SAMPLE=03-ui5-lint-findings vite build",
+    "build:sample:04": "SAMPLE=04-arc1-transport vite build",
+    "build:server": "tsc -p tsconfig.json",
+    "dev": "npm run build && npm run start",
+    "start": "node dist/src/server.js",
+    "start:00": "node dist/packages/00-html-time/src/server.js",
+    "start:01": "node dist/packages/01-ui5-webc-project-overview/src/server.js",
+    "start:02": "node dist/packages/02-ui5-card-project-overview/src/server.js",
+    "start:03": "node dist/packages/03-ui5-lint-findings/src/server.js",
+    "start:04": "node dist/packages/04-arc1-transport/src/server.js",
+    "start:stdio": "node dist/src/stdio.js",
+    "start:stdio:00": "node dist/packages/00-html-time/src/stdio.js",
+    "start:stdio:01": "node dist/packages/01-ui5-webc-project-overview/src/stdio.js",
+    "start:stdio:02": "node dist/packages/02-ui5-card-project-overview/src/stdio.js",
+    "start:stdio:03": "node dist/packages/03-ui5-lint-findings/src/stdio.js",
+    "start:stdio:04": "node dist/packages/04-arc1-transport/src/stdio.js",
+    "test:mcpjam": "npx -y @mcpjam/cli@latest apps conformance --url http://127.0.0.1:3000/mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "1.7.4",
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "@ui5/webcomponents": "2.23.2",
+    "cors": "2.8.6",
+    "express": "5.2.1",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/cors": "2.8.19",
+    "@types/express": "5.0.6",
+    "@types/node": "26.1.0",
+    "typescript": "6.0.3",
+    "vite": "8.1.3",
+    "vite-plugin-singlefile": "2.3.3"
+  }
+}

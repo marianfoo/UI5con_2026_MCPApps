@@ -1,0 +1,16 @@
+node_modules/
+dist/
+packages/*/app/dist/
+samples/*/dist/
+
+.env
+.env.*
+.npmrc
+
+*.log
+*.tsbuildinfo
+.DS_Store
+
+.cursor/
+.vite/
+coverage/

@@ -1,0 +1,39 @@
+{
+  "id": "A4HK906279",
+  "description": "ZSSI_IMPORTER extension hooks (Tier 1+2)",
+  "owner": "MARIAN",
+  "status": "D",
+  "type": "K",
+  "target": "",
+  "targetDesc": "Local Change Requests",
+  "objectCount": 2,
+  "tasks": [
+    {
+      "id": "A4HK906280",
+      "description": "ZSSI_IMPORTER extension hooks (Tier 1+2)",
+      "owner": "MARIAN",
+      "status": "D",
+      "objectCount": 2,
+      "objects": [
+        {
+          "pgmid": "R3TR",
+          "type": "INTF",
+          "name": "ZIF_SSI_HOOKS",
+          "wbtype": "INTF/OI",
+          "description": "SSI importer - developer extension hooks",
+          "locked": true,
+          "position": "000001"
+        },
+        {
+          "pgmid": "R3TR",
+          "type": "CLAS",
+          "name": "ZCL_SSI_UNIT_HOOKS",
+          "wbtype": "CLAS/OC",
+          "description": "SSI importer - extension hook unit tests",
+          "locked": false,
+          "position": "000002"
+        }
+      ]
+    }
+  ]
+}

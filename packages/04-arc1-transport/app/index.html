@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARC-1 Transport Organizer</title>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <section class="page">
+      <ui5-card>
+        <ui5-card-header id="card-header" slot="header" title-text="Transport Organizer: Requests" subtitle-text="Waiting for ARC-1 data"></ui5-card-header>
+
+        <div class="content">
+          <section id="organizer-view">
+            <div class="organizer-banner">Transport Organizer: Requests</div>
+            <div id="message-strip"></div>
+            <p id="tree-context" class="tree-context">Change Requests</p>
+
+            <div class="tree-table">
+              <div class="tree-row tree-header">
+                <div>Request / Task</div>
+                <div>Owner</div>
+                <div>Description</div>
+              </div>
+              <div id="se01-tree"></div>
+            </div>
+          </section>
+
+          <section id="task-view" hidden>
+            <div class="object-page-toolbar">
+              <ui5-button id="back-to-organizer" design="Transparent">Back to Requests</ui5-button>
+              <span></span>
+              <ui5-button id="release-task" design="Negative">Release Task</ui5-button>
+            </div>
+
+            <div class="object-page-header">
+              <span class="eyebrow">Transport Task</span>
+              <div class="title-line">
+                <h2 id="task-id">-</h2>
+                <span id="task-status" class="status-pill">-</span>
+              </div>
+              <p id="task-description">-</p>
+            </div>
+
+            <div id="task-message"></div>
+
+            <div class="task-facts">
+              <div><span>Owner</span><strong id="task-owner">-</strong></div>
+              <div><span>Parent Request</span><strong id="parent-request">-</strong></div>
+              <div><span>Objects</span><strong id="task-object-count">0</strong></div>
+              <div><span>Release State</span><strong id="task-release-state">-</strong></div>
+            </div>
+
+            <section class="object-section">
+              <div class="section-heading">
+                <div>
+                  <span class="eyebrow">Repository Content</span>
+                  <h3>Objects in this Task</h3>
+                </div>
+                <span id="parent-description" class="parent-description"></span>
+              </div>
+              <div id="task-object-table" class="object-table"></div>
+            </section>
+          </section>
+        </div>
+      </ui5-card>
+    </section>
+
+    <ui5-dialog id="release-dialog" header-text="Release transport task?" state="Critical">
+      <div class="dialog-content">
+        <p>Release task <strong id="release-task-id">-</strong> through ARC-1?</p>
+        <p>This action cannot be undone.</p>
+      </div>
+      <div slot="footer" class="dialog-footer">
+        <ui5-button id="cancel-release" design="Transparent">Cancel</ui5-button>
+        <ui5-button id="confirm-release" design="Negative">Release Task</ui5-button>
+      </div>
+    </ui5-dialog>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI5 Web Components Project Overview</title>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <section class="page">
+      <ui5-card>
+        <ui5-card-header id="card-header" slot="header" title-text="UI5 Project Overview" subtitle-text="Waiting for tool result"></ui5-card-header>
+
+        <div class="content">
+          <ui5-message-strip id="source-note" design="Information" hide-close-button>
+            Waiting for project data from the MCP tool.
+          </ui5-message-strip>
+
+          <section class="summary-grid" aria-label="Project summary">
+            <div class="metric">
+              <ui5-text class="metric-label">UI5 Version</ui5-text>
+              <ui5-tag id="ui5-version" class="metric-value" design="Neutral" hide-state-icon>-</ui5-tag>
+            </div>
+            <div class="metric">
+              <ui5-text class="metric-label">Theme</ui5-text>
+              <ui5-tag id="theme" class="metric-value" design="Neutral" hide-state-icon>-</ui5-tag>
+            </div>
+            <div class="metric">
+              <ui5-text class="metric-label">Views</ui5-text>
+              <ui5-text id="view-count" class="metric-number">0</ui5-text>
+            </div>
+            <div class="metric">
+              <ui5-text class="metric-label">Controllers</ui5-text>
+              <ui5-text id="controller-count" class="metric-number">0</ui5-text>
+            </div>
+          </section>
+
+          <section class="project-meta" aria-label="Project metadata">
+            <div>
+              <ui5-text class="meta-label">Project ID</ui5-text>
+              <ui5-text id="project-id" class="meta-value">-</ui5-text>
+            </div>
+            <div>
+              <ui5-text class="meta-label">Template</ui5-text>
+              <ui5-text id="template" class="meta-value">-</ui5-text>
+            </div>
+            <div>
+              <ui5-text class="meta-label">Main service</ui5-text>
+              <ui5-text id="service" class="meta-value">-</ui5-text>
+            </div>
+          </section>
+
+          <ui5-title class="section-title" level="H2" size="H5">Libraries</ui5-title>
+          <ui5-list id="library-list" accessible-name="Project libraries"></ui5-list>
+
+          <ui5-title class="section-title" level="H2" size="H5">Project Checks</ui5-title>
+          <ui5-list id="check-list" accessible-name="Project checks"></ui5-list>
+        </div>
+      </ui5-card>
+    </section>
+  </body>
+</html>

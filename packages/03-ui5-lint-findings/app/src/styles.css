@@ -1,0 +1,279 @@
+:root {
+  background: transparent;
+  color: #1d2d3e;
+  font-family: "72", "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 12px;
+}
+
+.page {
+  max-width: 1180px;
+}
+
+.content {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+
+h2,
+h3 {
+  letter-spacing: 0;
+  margin: 0;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #354a5f;
+  font-size: 13px;
+  margin: 4px 0 10px;
+  text-transform: uppercase;
+}
+
+.toolbar {
+  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toolbar label {
+  color: #556b82;
+  display: grid;
+  font-size: 12px;
+  gap: 4px;
+}
+
+.check {
+  align-items: center;
+  display: inline-flex !important;
+  gap: 6px !important;
+  min-height: 34px;
+}
+
+.block {
+  min-width: 0;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  align-items: center;
+  background: #eef2f6;
+  border: 1px solid #d5dadd;
+  border-radius: 999px;
+  color: #425970;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  gap: 8px;
+  padding: 4px 10px;
+}
+
+.chip:hover {
+  background: #e5f0fa;
+  border-color: #9dc8f2;
+}
+
+.chip:focus-visible {
+  outline: 2px solid #0a6ed1;
+  outline-offset: 2px;
+}
+
+.chip[aria-pressed="true"] {
+  background: #d1e8ff;
+  border-color: #0a6ed1;
+  box-shadow: inset 0 0 0 1px #0a6ed1;
+}
+
+.chip code {
+  color: #425970;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+}
+
+.chip[aria-pressed="true"] code {
+  color: #12395b;
+  font-weight: 700;
+}
+
+.chip b {
+  background: #0a6ed1;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 12px;
+  min-width: 18px;
+  padding: 1px 6px;
+  text-align: center;
+}
+
+.file-list {
+  display: grid;
+  gap: 12px;
+}
+
+.file {
+  border: 1px solid #d5dadd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.file-head {
+  align-items: center;
+  background: #f5f6f7;
+  border-bottom: 1px solid #d5dadd;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  justify-content: space-between;
+  padding: 8px 12px;
+}
+
+.file-head code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.file-actions,
+.msg-actions {
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.counts {
+  color: #556b82;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.messages {
+  display: grid;
+}
+
+.msg {
+  align-items: baseline;
+  border-left: 4px solid transparent;
+  display: grid;
+  gap: 4px 12px;
+  grid-template-columns: 64px 64px 190px minmax(220px, 1fr) auto;
+  padding: 8px 12px;
+}
+
+.msg + .msg {
+  border-top: 1px solid #eceff1;
+}
+
+.msg.error,
+.msg.fatal {
+  border-left-color: #bb0000;
+}
+
+.msg.warning {
+  border-left-color: #e9730c;
+}
+
+.msg.ignored {
+  background: #fafafa;
+  opacity: 0.72;
+}
+
+.sev {
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 6px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sev.error,
+.sev.fatal {
+  background: #ffe3e3;
+  color: #bb0000;
+}
+
+.sev.warning {
+  background: #fde9d7;
+  color: #a35b00;
+}
+
+.sev.info {
+  background: #e5f0fa;
+  color: #0a6ed1;
+}
+
+.loc {
+  color: #556b82;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+}
+
+.rule {
+  color: #425970;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.text {
+  color: #1d2d3e;
+  font-size: 13px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.ignored-note {
+  color: #6a6d70;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.link-button {
+  background: transparent;
+  border: 0;
+  color: #0a6ed1;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.link-button:hover {
+  color: #0854a0;
+}
+
+.empty {
+  color: #6a6d70;
+  font-size: 13px;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .msg {
+    grid-template-columns: 60px 60px 1fr;
+  }
+
+  .msg .text,
+  .msg-actions {
+    grid-column: 1 / -1;
+  }
+}

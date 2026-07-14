@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Integration Cards Project Overview</title>
+    <script
+      id="sap-ui-bootstrap"
+      src="https://ui5.sap.com/resources/sap-ui-integration-nojQuery.js"
+      data-sap-ui-compatVersion="edge"
+      data-sap-ui-theme="sap_horizon">
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <section class="page">
+      <header class="header">
+        <div>
+          <p class="eyebrow">UI Integration Cards MCP App</p>
+          <h1>UI5 Project Cards</h1>
+          <p id="summary">Waiting for project data</p>
+        </div>
+      </header>
+
+      <div id="cards" class="cards">
+        <ui-integration-card id="summary-card"></ui-integration-card>
+        <ui-integration-card id="checks-card"></ui-integration-card>
+      </div>
+    </section>
+  </body>
+</html>

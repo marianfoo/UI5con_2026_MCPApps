@@ -1,0 +1,56 @@
+:root {
+  background: transparent;
+  color: #1d2d3e;
+  font-family: "72", "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px;
+}
+
+.page {
+  max-width: 980px;
+}
+
+.header {
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  color: #556b82;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+
+#summary {
+  color: #556b82;
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
+}
+
+ui-integration-card {
+  min-height: 300px;
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

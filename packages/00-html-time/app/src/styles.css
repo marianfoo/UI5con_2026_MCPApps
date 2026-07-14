@@ -1,0 +1,80 @@
+:root {
+  color: #1d2d3e;
+  background: transparent;
+  font-family: "72", "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px;
+}
+
+.time-card {
+  box-sizing: border-box;
+  max-width: 420px;
+  border: 1px solid #d5dadd;
+  border-radius: 8px;
+  background: #fff;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgb(34 54 73 / 10%);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #556b82;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 20px;
+}
+
+time {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.note {
+  min-height: 20px;
+  margin: 0 0 16px;
+  color: #556b82;
+  font-size: 13px;
+}
+
+button {
+  border: 1px solid #0064d9;
+  border-radius: 6px;
+  background: #0070f2;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 8px 12px;
+}
+
+button:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f5f6f7;
+  }
+
+  .time-card {
+    border-color: #354a5f;
+    background: #1c2228;
+  }
+
+  .eyebrow,
+  .note {
+    color: #a9b4be;
+  }
+}

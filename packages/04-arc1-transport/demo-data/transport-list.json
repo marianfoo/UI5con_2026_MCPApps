@@ -1,0 +1,32 @@
+[
+  {
+    "id": "A4HK906279",
+    "description": "ZSSI_IMPORTER extension hooks (Tier 1+2)",
+    "owner": "MARIAN",
+    "status": "D",
+    "type": "K",
+    "target": "",
+    "targetDesc": "Local Change Requests",
+    "objectCount": 2,
+    "tasks": [
+      {
+        "id": "A4HK906280",
+        "description": "ZSSI_IMPORTER extension hooks (Tier 1+2)",
+        "owner": "MARIAN",
+        "status": "D",
+        "objectCount": 2
+      }
+    ]
+  },
+  {
+    "id": "A4HK906313",
+    "description": "Empty rehearsal request",
+    "owner": "MARIAN",
+    "status": "D",
+    "type": "K",
+    "target": "",
+    "targetDesc": "Local Change Requests",
+    "objectCount": 0,
+    "tasks": []
+  }
+]
